@@ -1,0 +1,46 @@
+diff -rupN asio_arch_ext/asio/include/asio/error.hpp asio_arch_ext_copy/asio/include/asio/error.hpp
+--- asio_arch_ext/asio/include/asio/error.hpp	2016-09-19 02:38:47.000000000 +0300
++++ asio_arch_ext_copy/asio/include/asio/error.hpp	2017-01-23 18:21:08.000000000 +0300
+@@ -318,6 +318,42 @@ inline asio::error_code make_error_code(
+       static_cast<int>(e), get_misc_category());
+ }
+ 
++inline bool operator==(const error_code& e1, const basic_errors& e2)
++{
++  return (e1 == make_error_code(e2));
++}
++inline bool operator!=(const error_code& e1, const basic_errors& e2)
++{
++  return (e1 != make_error_code(e2));
++}
++
++inline bool operator==(const error_code& e1, const netdb_errors& e2)
++{
++  return (e1 == make_error_code(e2));
++}
++inline bool operator!=(const error_code& e1, const netdb_errors& e2)
++{
++  return (e1 != make_error_code(e2));
++}
++
++inline bool operator==(const error_code& e1, const addrinfo_errors& e2)
++{
++  return (e1 == make_error_code(e2));
++}
++inline bool operator!=(const error_code& e1, const addrinfo_errors& e2)
++{
++  return (e1 != make_error_code(e2));
++}
++
++inline bool operator==(const error_code& e1, const misc_errors& e2)
++{
++  return (e1 == make_error_code(e2));
++}
++inline bool operator!=(const error_code& e1, const misc_errors& e2)
++{
++  return (e1 != make_error_code(e2));
++}
++
+ } // namespace error
+ } // namespace asio
+ 

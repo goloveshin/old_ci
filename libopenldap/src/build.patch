@@ -1,0 +1,16 @@
+--- configure.in	2015-07-16 12:24:22.345843000 +0300
++++ configure.in	2015-07-16 12:30:28.249657667 +0300
+@@ -2399,13 +2399,6 @@
+ 
+ dnl ----------------------------------------------------------------
+ dnl Checks for library functions.
+-AC_FUNC_MEMCMP
+-
+-if test $ac_cv_func_memcmp_working = no ; then
+-	AC_DEFINE(NEED_MEMCMP_REPLACEMENT,1,
+-		[define if memcmp is not 8-bit clean or is otherwise broken])
+-fi
+-
+ AC_FUNC_STRFTIME
+ 
+ OL_FUNC_INET_ATON

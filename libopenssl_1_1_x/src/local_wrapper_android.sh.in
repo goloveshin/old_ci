@@ -1,0 +1,3 @@
+#!/bin/bash
+
+export PATH=@ANDROID_TOOLCHAIN_ROOT@/@PATH_STRING@/bin:$PATH

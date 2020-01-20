@@ -1,0 +1,28 @@
+cmake_minimum_required(VERSION 3.7)
+
+add_subdirectory(libopenssl_1_0_x)
+add_subdirectory(libopenssl_1_1_x)
+add_subdirectory(asio)
+add_subdirectory(libsqlite)
+add_subdirectory(libiconv)
+add_subdirectory(libzip)
+add_subdirectory(libuuid)
+add_subdirectory(libcurl)
+add_subdirectory(libmsgpack)
+add_subdirectory(libsasl)
+add_subdirectory(libopenldap)
+add_subdirectory(libldapc++)
+add_subdirectory(libtinyxml2)
+add_subdirectory(utf8)
+add_subdirectory(jsoncpp)
+add_subdirectory(spdlog)
+
+# у нас используются функции, которые идут в /low-level как static, соответственно, не можем использовать native "как есть"
+# add_subdirectory(libetpan)
+
+add_subdirectory(libevent)
+add_subdirectory(zeromq)
+add_subdirectory(liblua)
+add_subdirectory(linenoise)
+add_subdirectory(hiredis)
+add_subdirectory(libev)
